@@ -1,0 +1,22 @@
+syntax = "proto3";
+package HelloService;
+
+import "google/protobuf/empty.proto";
+
+option java_multiple_files = false;
+option java_package = "com.chihyao.grpc";
+option csharp_namespace="HelloService";
+
+service HelloService {
+  rpc SayHello (HelloRequest) returns (google.protobuf.Empty);
+}
+
+message HelloRequest {
+  string name = 1;
+  string age = 2;
+  Sex Sex = 3;
+}
+enum Sex {
+  BOY = 0;
+  GIRL = 1;
+}
