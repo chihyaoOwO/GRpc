@@ -1,6 +1,6 @@
 package com.chihyao.grpc.converter;
 
-import com.chihyao.grpc.Hello;
+import HelloService.Hello;
 import com.chihyao.grpc.vo.RequestVO;
 import net.badata.protobuf.converter.type.TypeConverter;
 

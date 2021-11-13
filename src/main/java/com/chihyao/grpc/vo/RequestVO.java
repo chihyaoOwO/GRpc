@@ -1,6 +1,8 @@
 package com.chihyao.grpc.vo;
 
-import com.chihyao.grpc.Hello;
+
+
+import HelloService.Hello;
 import com.chihyao.grpc.converter.SexConverter;
 import lombok.*;
 import net.badata.protobuf.converter.annotation.ProtoClass;

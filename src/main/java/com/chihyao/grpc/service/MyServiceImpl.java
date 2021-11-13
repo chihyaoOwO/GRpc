@@ -1,7 +1,7 @@
 package com.chihyao.grpc.service;
 
-import com.chihyao.grpc.Hello;
-import com.chihyao.grpc.HelloServiceGrpc;
+import HelloService.Hello;
+import HelloService.HelloServiceGrpc;
 import com.chihyao.grpc.vo.RequestVO;
 import com.google.protobuf.Empty;
 import io.grpc.stub.StreamObserver;
@@ -16,6 +16,7 @@ public class MyServiceImpl extends HelloServiceGrpc.HelloServiceImplBase {
         RequestVO requestVO = Converter.create().toDomain(RequestVO.class, request);
         System.out.println(requestVO);
         System.out.println("success");
-        super.sayHello(request, responseObserver);
+        responseObserver.onNext(Empty.getDefaultInstance());
+        responseObserver.onCompleted();
     }
 }

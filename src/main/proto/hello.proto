@@ -4,8 +4,6 @@ package HelloService;
 import "google/protobuf/empty.proto";
 
 option java_multiple_files = false;
-option java_package = "com.chihyao.grpc";
-option csharp_namespace="HelloService";
 
 service HelloService {
   rpc SayHello (HelloRequest) returns (google.protobuf.Empty);
