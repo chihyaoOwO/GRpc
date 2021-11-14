@@ -18,3 +18,6 @@ enum Sex {
   BOY = 0;
   GIRL = 1;
 }
+message HelloResponse {
+  string msg = 1;
+}
